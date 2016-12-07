@@ -1,0 +1,249 @@
+// Navbar
+nav
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	width: 100%
+	color: $color_white
+	padding: 0 10px 0 10px
+	box-shadow: $shadow_flat
+	z-index: 11
+	.left-side
+		.profile-toggler
+			float: left
+			padding: 10px
+			color: $color_white
+			margin-left: -10px
+			margin-right: 10px
+			font-size: 1.85em
+
+			&:hover
+				cursor: pointer
+				background: $color_light / 1.05
+		.logo
+			float: left
+			margin: 10px auto
+			img
+				width: 25px
+		.search-bar
+			float: left
+			position: relative
+			.search-toggler
+				float: left
+				display: inline-block
+				font-size: 1.5em
+				padding: 12px
+				margin-left: 10px
+
+				&:hover
+					cursor: pointer
+					background: $color_light / 1.05
+			.ajax-result
+				position: absolute
+				top: 100%
+				left: 18%
+				width: 83%
+				min-height: 200px
+				background: #FFF
+				display: none
+				box-shadow: $shadow_flat_light
+				max-height: 300px
+				overflow: hidden
+				ul
+					list-style-type: none
+					padding: 0
+					margin: 0
+					li
+						padding: 5px
+						border-bottom: 1px solid #EEE
+						transition: .15s
+						&:hover
+							background: transparentize(#EEE, .6)
+						.img
+							float: left
+							width: 20%
+							img
+								width: 100%
+						.text
+							float: left
+							width: 78%
+							color: #666
+							margin-left: 2%
+							padding-bottom: 10px
+							.name
+								display: block
+								margin-top: 6px
+							.short-description
+								color: #999
+								font-size: 13px
+			.search-input	
+				float: right
+				width: 0
+				overflow: hidden
+				// transition: .25s
+				&.open-search
+					width: 250px
+					.ajax-result
+						display: block
+				input
+					width: 100%	
+					background: transparent
+					border: 0
+					color: #FFF
+					border-bottom: 1px solid #FFF
+					padding: 12px
+					display: inline-block
+					margin-left: 5px
+					&:focus
+						outline: 0
+						box-shadow: none
+
+
+
+	.right-side
+		float: right
+		margin-right: 20px
+		// transition: 0.25s
+		.mobile-menu
+			display: none
+		ul.top-level-menu
+			list-style-type: none
+			padding: 0
+			margin: 0
+			> li
+				display: inline-block
+				padding: 12px
+				font-size: 1.2em
+				transition: .1s
+				position: relative
+				span.counter
+					font-size: .6em
+				i
+					display: inline-block
+					margin-right: 5px
+				&:hover, &.active-li
+					cursor: pointer
+					background: $color_light / 1.05
+				&.mobile-menu
+					display: none
+					font-size: 1.6em !important
+					.counter
+						position: relative
+						top: -5px
+						left: -5px
+				&.profile-thumbnail
+					img
+						width: 30px
+						border-radius: 100%
+						margin-bottom: -10px
+					span
+						font-size: .8em
+					i
+						font-size: .6em
+					ul.submenu
+						min-width: 200px
+					ul.profile-actions
+						padding: 0
+						margin: 0
+						list-style-type: none
+						a
+							color: #333
+							display: block
+							border-bottom: 1px solid transparentize($color_light_gray, .5)
+							padding: 10px 5px
+							text-decoration: none
+							font-size: .8em
+							transition: .1s
+							&:hover
+								background: $color_white / 1.02
+							&:last-of-type
+								border-bottom: 0
+							li
+								i
+									float: right
+									font-size: 1.15em
+				.submenu
+					display: none
+					position: absolute
+					top: 100%
+					right: 0
+					padding: 0
+					padding-top: 5px
+					background: $color_white
+					min-width: 275px
+					box-shadow: $shadow_flat
+					transition: .2s
+					&.open-submenu
+						display: block
+					span.menu-title
+						color: #999
+						font-size: .6em
+						display: inlien-block
+						margin-left: 5px
+					span.all
+						font-size: .6em
+						display: inline-block
+						margin-right: 5px
+						float: right
+						a
+							color: $color_a
+							font-weight: bold
+							text-decoration: none
+					ul.notifications-list
+						border-top: 1px solid #EEE
+						list-style-type: none
+						padding: 0
+						margin: 0	
+						margin-top: 7px
+						max-height: 350px
+						overflow-y: auto
+						.mCSB_inside>.mCSB_container
+							margin-right: 10px
+						a
+							color: $color_black
+							display: inline-block
+							border-bottom: 1px solid #eee
+							width: 100%
+							&:last-of-type
+								border-bottom: 0
+						li
+							padding: 10px 5px
+							position: relative
+							padding-bottom: 25px
+							&:hover
+								background: $color_white / 1.02
+							img.person-image
+								width: 50px
+								border-radius: 100%
+								float: left
+							p
+								display: inline-block
+								font-size: 13px
+								width: 70%
+								margin: 0
+								margin-left: 10px
+								.highlight
+									font-weight: bold
+							.seen-indicator
+								width: 5px
+								height: 5px
+								border: 1px solid #EEE
+								position: absolute
+								top: 5px
+								right: 5px
+								border-radius: 100%
+							.time
+								position: absolute
+								left: 65px
+								bottom: 5px
+								font-size: .55em
+								color: #888
+
+
+
+
+
+// Mobile menu
+.mobile-submenu
+	display: none

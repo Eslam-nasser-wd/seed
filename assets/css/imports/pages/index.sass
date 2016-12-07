@@ -1,0 +1,409 @@
+// Style For Index Page
+.index-warpper
+	width: 75%
+	margin-top: 20px
+
+// Timeline nav
+.timeline-nav
+	width: 100%
+	background: $color_white
+	box-shadow: $shadow_flat-light
+	a
+		color: $color_p
+	.nav-item
+		padding: 10px 20px
+		text-align: center
+		float: left
+		width: 25%
+		border-right: 1px solid transparentize($color_light_gray, .6)
+		border-left: 1px solid transptagFriendarentize($color_light_gray, .6)
+		transition: .14s
+		&:hover
+			background: $color_white / 1.02
+			// color: $color_light
+		i.icon
+			font-size: 1.2em
+			margin-right: 5px
+			display: inline-block
+
+// Write post
+.write-post
+	width: 100%
+	background: $color_white
+	box-shadow: $shadow_flat-light
+	display: none
+	margin-top: 15px
+	.head
+		background: $color_dark
+		color: $color_white
+		img
+			width: 50px
+			float: left
+			margin-right: 10px
+		h4
+			display: inline-block
+			margin-bottom: 5px
+			margin-top: 10px
+			a
+				color: $color_white
+				text-decoration: none
+				&:hover
+					text-decoration: underline
+		.eye
+			float: right
+			font-size: 1.5em
+			display: inline-block
+			z-index: 3
+			margin-top: 13px
+			margin-right: 10px
+	.body
+		textarea
+			width: 100%
+			min-height: 200px
+			resize: vertical
+			padding: 10px
+			border: 0
+			border-bottom: 1px solid #eee
+			resize: none
+			&:focus
+				outline: 0
+				box-shadow: none
+		.dashed
+			display: block
+			border-top: 2px dashed #DDD
+			display: none
+		#tagFriend
+			width: 100%
+			margin: 10px auto
+			padding: 5px
+			display: none
+			&:focus
+				outline: 0
+				box-shadow: none
+	.footer
+		padding: 5px 
+		background: transparentize($color_dark, .92)
+		border: 5px solid $color_white
+		display: flex
+		.post-action
+			color: #555
+			font-size: 25px
+			cursor: pointer
+			margin-right: 10px
+			position: relative
+			.emotions-warpper
+				position: absolute
+				bottom: 120%
+				width: 100px
+				height: 100px
+				border: 1px solid #EEE
+				background: #FFF
+				z-index: 1
+				right: 50%
+				margin-right: -50px
+				font-size: 12px
+				box-shadow: $shadow_flat
+				display: none
+				&:after
+					content: ''
+					border: 
+						top: 10px solid #FFF
+						right: 5px solid transparent
+						left: 5px solid transparent
+					position: absolute
+					top: 100%
+					right: 45%
+		#selectPrivacy
+			font-size: 14px
+			padding: 4px 12px
+			line-height: 1.42857
+			color: #333333
+			background-color: #f7f7f7
+			background-image: none
+			border: 1px solid #adadad
+			border-radius: 4px
+			outline: none
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+			-webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s
+			transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s
+			margin: auto
+			margin-left: 5px
+		input[type="submit"]
+			padding: 3px 20px
+			background: $color_dark
+			color: $color_white
+			border: 0
+			border-radius: 3px
+			&:hover
+				cursor: pointer
+				background: $color_dark / .9
+		.live-post
+			margin: auto
+			margin-right: 10px
+			user-select: none
+			label
+				cursor: pointer
+				position: relative
+				top: -3px
+				-webkit-user-select: none
+				-moz-user-select: none
+				-ms-user-select: none
+				user-select: none
+				input
+					display: none
+					& + span:before
+						content: "\f372"
+						display: inline-block
+						font-family: "Ionicons"
+						speak: none
+						font-style: normal
+						font-weight: normal
+						font-variant: normal
+						text-transform: none
+						text-rendering: auto
+						line-height: 1
+						-webkit-font-smoothing: antialiased
+						-moz-osx-font-smoothing: grayscale
+						font-size: 20px
+						color: #333
+						margin-right: 5px
+						position: relative
+						bottom: -2px
+					&:checked + span:before
+						content: "\f373"
+						color: $color_light
+						animation: tick .18s
+				
+@keyframes tick
+	0%
+		transform : scale(0)
+	90%
+		transform : scale(1.4)
+	100%
+		transform : scale(1)
+
+// Single post
+.single-post
+	width: 100%
+	background: $color_white
+	box-shadow: $shadow_flat-light
+	margin-top: 15px
+	position: relative
+	padding: 5px
+	.post-head
+		background: $color_dark
+		// padding: 5px 10px
+		color: $color_white
+		position: relative
+		img.person-image
+			float: left
+			width: 50px
+			margin-right: 10px
+		.person-name
+			margin: 0
+			padding: 0
+			display: inline-block
+			margin-top: 10px
+			margin-bottom: 5px
+			a
+				color: $color_white
+				text-decoration: none
+				&:hover
+					text-decoration: underline
+		.post-date
+			display: inline-block
+			font-size: .7em
+			color: $color_light_gray
+		span.action
+			position: absolute
+			right: 10px
+			top: 13px
+			font-size: 1.4em
+			cursor: pointer
+			transition: .2s
+			&:hover
+				color: $color_light
+			&.delete-post
+				right: 40px
+		.post-options-list	
+			list-style-type: none
+			padding: 0
+			margin: 0
+			background: #FFF
+			position: absolute
+			top: 100%
+			right: -1px
+			min-width: 130px
+			box-shadow: $shadow_flat-light
+			display: none
+			a
+				color: #333
+				text-decoration: none
+				font-size: 12px
+				border-top: 1px solid #EEE
+				li
+					padding: 10px 5px
+					&:hover
+						background: transparentize(#EEE, .2)
+
+	.post-body
+		padding: 8px 0
+		font-size: .9em
+		img.post-image, iframe
+			width: 100%
+			max-height: 50vh
+	.post-details
+		width: 100%
+		background: transparentize($color_light_gray, .7)
+		padding: 5px 10px
+		margin-top: 10px
+		border: 1px solid $color_light_gray
+		span
+			display: inline-block
+			margin-right: 15px
+		i
+			color: $color_dark_gray / 1.5
+
+
+	.post-comments
+		.replays
+			.comment-actions
+				padding-left: 7% !important
+				.delete-comment
+					font-size: 14px !important
+
+		.single-comment
+			width: 100%
+			padding: 5px
+			margin: 5px auto
+			position: relative
+			border-bottom: 1px solid rgba(238, 238, 238, 0.49)	
+			.comment-actions
+				padding-left: 45px
+				font-size: 13px
+				.action
+					display: inline-block
+					margin-right: 10px
+					transition: .2s
+					cursor: pointer
+					opacity: .7
+					color: rgb(64, 56, 56)
+					&:hover
+						opacity: 1
+				.delete-comment
+					position: absolute
+					top: 10px
+					right: 10px
+					font-size: 16px
+					opacity: .8
+					transition: .2s
+					cursor: pointer
+					&:hover
+						opacity: 1
+				a
+					color: inherit
+					text-decoration: none
+			img
+				width: 40px
+				float: left
+				margin-right: 10px
+			.person-name
+				float: left
+				display: inline-block
+				a
+					color: $color_black
+					text-decoration: none
+					&:hover
+						text-decoration: underline
+			.replays
+				border-left: 1px solid #EEE
+				margin-left: 20px
+				padding-left: 5px
+				margin-top: 10px
+				img
+					width: 30px
+				.person-name
+					font-size: .8em
+				p
+					font-size: 0.7em
+					margin-top: 0
+			.post-date
+				float: left
+				color: $color_dark_gray
+				font-size: .7em
+				display: inline-block
+				margin-top: 5px
+				margin-left: 5px
+			p
+				margin: 0
+				padding: 0
+				color: $color_dark
+				margin-top: 5px
+				font-size: .8em
+				width: 100%
+				// margin-left: 6%
+
+	.write-comment
+		margin-top: 10px
+		.user-image
+			width: 6%
+			float: left
+			margin-right: 1%
+			margin-left: 1%
+			> img
+				width: 40px
+		.user-input
+			width: 92%
+			float: left
+			position: relative
+
+		.comment-attach
+			display: inline-block
+			position: absolute
+			z-index: 2
+			color: #666
+			font-size: 1.6em
+			right: 1%
+			top: 5px
+			&.emotions
+				position: absolute
+				right: 37px
+				font-size: 1.4em
+				top: 8px
+				.emotions-warpper
+					position: absolute
+					bottom: 120%
+					width: 100px
+					height: 100px
+					border: 1px solid #EEE
+					background: #FFF
+					z-index: 1
+					right: 50%
+					margin-right: -50px
+					font-size: 12px
+					box-shadow: $shadow_flat
+					display: none
+					&:after
+						content: ''
+						border: 
+							top: 10px solid #FFF
+							right: 5px solid transparent
+							left: 5px solid transparent
+						position: absolute
+						top: 100%
+						right: 45%
+			&:hover
+				cursor: pointer
+		form
+			margin-bottom: 0
+			#comment_image
+				display: none
+			input
+				padding: 10px 10px
+				width: 100%
+				border: 0
+				position: relative
+				background: transparentize($color_light_gray, .6)
+				&:focus
+					outline: 0
+					box-shadow: none

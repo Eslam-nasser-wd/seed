@@ -1,0 +1,26 @@
+// General Styles
+@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css'
+
+* 
+	-webkit-box-sizing: border-box !important
+	-moz-box-sizing: border-box !important
+	box-sizing: border-box !important
+
+body
+	//background: $color_light_gray
+	font-size: 16px // 1.2rem
+	font-family: $font_general
+	//padding-bottom: 50px
+	overflow-x: hidden
+p
+	line-height: 170% !important
+
+h1, h2, h3
+	font-family: $font_header
+
+// Clearfix
+.cf:after, .cf:before
+	content: ' '
+	display: table
+.cf:after
+	clear: both
